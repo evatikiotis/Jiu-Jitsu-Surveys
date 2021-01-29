@@ -8,9 +8,6 @@ export default function Page({ children }) {
         {`
           .page {
             max-height: 600px;
-            overflow: scroll;
-            margin-bottom: 70px;
-            margin-top: 30px;
           }
         `}
       </style>

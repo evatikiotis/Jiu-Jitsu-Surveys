@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 import Footer from '../components/Footer';
 import GlobalStyles from '../styles/GlobalStyles';
 
-const Layout = ({ children }) => <div>{children}</div>;
+const Layout = ({ children }) => <>{children}</>;
 
 // eslint-disable-next-line react/prop-types
 export default function App({ Component, pageProps }) {

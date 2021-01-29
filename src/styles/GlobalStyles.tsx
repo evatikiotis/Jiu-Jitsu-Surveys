@@ -9,7 +9,7 @@ export default function GlobalStyles() {
             display: none;
           }
         }
-        body {
+        .blue-colorr {
           color: blue;
         }
       `}
