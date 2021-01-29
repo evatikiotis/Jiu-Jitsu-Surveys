@@ -5,6 +5,7 @@ import Page from '../components/Page';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useRouter } from 'next/router';
 import Footer from '../components/Footer';
+import GlobalStyles from '../styles/GlobalStyles';
 
 const Layout = ({ children }) => <div>{children}</div>;
 
@@ -25,15 +26,7 @@ export default function App({ Component, pageProps }) {
         </Page>
       </section>
       <Footer />
-      <style jsx global>
-        {`
-          @media only screen and (max-width: 900px) {
-            .display-none-small-screen {
-              display: none;
-            }
-          }
-        `}
-      </style>
+      <GlobalStyles />
     </Layout>
   );
 }
