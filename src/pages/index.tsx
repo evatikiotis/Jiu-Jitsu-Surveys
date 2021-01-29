@@ -1,3 +1,3 @@
-export default function Entrypoint() {
-  return <></>;
+export default function Home() {
+  return <h1>Home page</h1>;
 }
