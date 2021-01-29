@@ -1,10 +1,10 @@
-import React from "react";
-import Head from "next/head";
-import NavigationBar from "../components/NavigationBar";
-import Page from "../components/Page";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { useRouter } from "next/router";
-import Footer from "../components/Footer";
+import React from 'react';
+import Head from 'next/head';
+import NavigationBar from '../components/NavigationBar';
+import Page from '../components/Page';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { useRouter } from 'next/router';
+import Footer from '../components/Footer';
 
 const Layout = ({ children }) => <div>{children}</div>;
 
