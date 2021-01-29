@@ -1,9 +1,3 @@
-import { NextPage } from 'next';
-
-const IndexPage: NextPage = () => (
-  <div>
-    <h1>Hello Next.js</h1>
-  </div>
-);
-
-export default IndexPage;
+export default function Home() {
+  return <h1>This is Home page</h1>;
+}
