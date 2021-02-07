@@ -3,21 +3,23 @@ import Head from 'next/head';
 import NavigationBar from '../components/NavigationBar';
 import Page from '../components/Page';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import Footer from '../components/Footer';
 import GlobalStyles from '../styles/GlobalStyles';
 
-const Layout = ({ children }) => <>{children}</>;
+// @ts-ignore
+const Layout = ({children}) => <>{children}</>;
 
 // eslint-disable-next-line react/prop-types
-export default function App({ Component, pageProps }) {
+// @ts-ignore
+export default function App({Component, pageProps}) {
   const router = useRouter();
   return (
     <Layout>
       <Head>
         <title>Bjj Surveys</title>
         {/* TODO: Add proper favicon */}
-        <link rel="icon" href="/static/favicon.png" />
+        <link rel="icon" href="/static/favicon.png"/>
       </Head>
       <NavigationBar {...router} />
       <section>
@@ -25,8 +27,8 @@ export default function App({ Component, pageProps }) {
           <Component {...pageProps} />
         </Page>
       </section>
-      <Footer />
-      <GlobalStyles />
+      <Footer/>
+      <GlobalStyles/>
     </Layout>
   );
 }

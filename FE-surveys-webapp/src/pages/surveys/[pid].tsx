@@ -1,8 +1,8 @@
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 
 export default function SurveyForm() {
   const router = useRouter();
-  const { pid } = router.query;
+  const {pid} = router.query;
   return (
     <div>
       <iframe
@@ -13,7 +13,7 @@ export default function SurveyForm() {
         marginHeight={0}
         marginWidth={0}
       >
-        Loading… lscreen>
+        Loading…
       </iframe>
     </div>
   );
