@@ -1,0 +1,24 @@
+version: "3.9"
+services:
+  backend:
+    build: ./survey-manager
+    ports:
+      - "8080:8080"
+  frontend:
+    build: ./survey-webapp
+    image: frontend
+    restart: on-failure
+    tty: true
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+
+
+# docker cp 902ecb729fd6:/usr/src/.next ./
+
+
+
+
+
