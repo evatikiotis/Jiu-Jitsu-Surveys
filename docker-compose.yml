@@ -1,11 +1,11 @@
 version: "3.9"
 services:
   backend:
-    build: ./survey-manager
+    build: ./BE-survey-manager
     ports:
       - "8080:8080"
   frontend:
-    build: ./survey-webapp
+    build: ./FE-surveys-webapp
     image: frontend
     restart: on-failure
     tty: true
