@@ -1,18 +1,7 @@
-# Next.js Typesript and ESLint boilerplate
-This repo contains a Next.js skeleton with Typescript and ESLint with pre-commit hooks.
+# Surveys webapp
+Nextjs application to host and promote jiu jitsu Surveys
 
-# Using this boilerplate
-```bash
-curl https://codeload.github.com/diondree/nextjs-boilerplate/tar.gz/master | tar -xz nextjs-boilerplate-master
-# Feel free to rename this directory
-cd nextjs-boilerplate-master
-```
-
-Install it and run:
-```bash
-npm install
-npm run dev
-# OR
-yarn
-yarn dev
-```
+With NextJS we can easily solve SEO challenges that's why we chose it. In the current POC we
+use static props nextjs feature to generate static pages and deploy them with minimum cost. Static 
+pages can be SEO optimized without losing SPA framework advantages. Check our workflow repository
+to check how the pages are generated and deployed. 
