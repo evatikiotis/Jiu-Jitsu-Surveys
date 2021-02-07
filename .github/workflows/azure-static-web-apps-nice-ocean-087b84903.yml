@@ -26,12 +26,12 @@ jobs:
         run: ls -a
 
       - name: Run docker-compose
-        run: docker-compose up -d
+        run: docker-compose up -d --build
 
-      - name: Sleep for 40 seconds
+      - name: Sleep for 90 seconds
         uses: jakejarvis/wait-action@master
         with:
-          time: '70s'
+          time: '90s'
 
       - name: Check running containers
         run: docker ps
