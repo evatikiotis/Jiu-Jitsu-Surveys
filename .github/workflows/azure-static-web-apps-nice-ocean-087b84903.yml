@@ -20,7 +20,7 @@ jobs:
           submodules: true
           # Runs a set of commands using the runners shell
       - name: Create google service account key file
-        run: echo '${{ secrets.GOOGLE_SERVICEACCOUNT_KEY_FILE_CONTENT }}' >  survey-manager/src/main/resources/${{ secrets.GOOGLE_SERVICEACCOUNT_KEY_FILE_NAME }}.json
+        run: echo '${{ secrets.GOOGLE_SERVICEACCOUNT_KEY_FILE_CONTENT }}' >  BE-survey-manager/src/main/resources/${{ secrets.GOOGLE_SERVICEACCOUNT_KEY_FILE_NAME }}.json
 
       - name: ls
         run: ls -a
