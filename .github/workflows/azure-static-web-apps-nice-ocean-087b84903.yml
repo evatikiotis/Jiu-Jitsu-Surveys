@@ -37,7 +37,7 @@ jobs:
         run: docker ps
 
       - name: Copy static generated web pages
-        run: docker cp bjj-surveys_frontend_1:/usr/src/out ./
+        run: docker cp jiu-jitsu-surveys_frontend_1:/usr/src/out ./
 
       - name: Run ls
         run: ls -a
