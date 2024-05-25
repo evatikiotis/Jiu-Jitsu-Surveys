@@ -12,6 +12,7 @@ export default function GlobalStyles() {
         .blue-colorr {
           color: blue;
         }
+        
       `}
     </style>
   );

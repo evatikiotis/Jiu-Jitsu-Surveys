@@ -38,13 +38,14 @@ export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
   // TODO: url to be passed as environment variable
-  const res = await fetch("http://backend:8080/surveys");
-  const surveys = await res.json();
-  // By returning { props: posts }, the Blog component
-  // will receive `posts` as a prop at build time
-  return {
-    props: {
-      surveys,
-    },
-  };
+  // const res = await fetch("http://backend:8080/surveys");
+  // const surveys = await res.json();
+  // // By returning { props: posts }, the Blog component
+  // // will receive `posts` as a prop at build time
+  // return {
+  //   props: {
+  //     surveys,
+  //   },
+  // };
+  return [];
 }
