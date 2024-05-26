@@ -47,5 +47,7 @@ export async function getStaticProps() {
   //     surveys,
   //   },
   // };
-  return [];
+  
+  return {props: {surveys: []}};
+
 }
