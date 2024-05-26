@@ -7,8 +7,8 @@ import Link from "next/link";
 export default function NavigationBar(router) {
   const HOME_LABEL = "Home";
   const HOME_PATHNAME = "/";
-  const SURVEYS_LABEL = "Surveys";
-  const SURVEYS_PATHNAME = "/surveys";
+  const SURVEYS_LABEL = "Articles";
+  const SURVEYS_PATHNAME = "/articles";
   const ABOUT_LABEL = "About";
   const ABOUT_PATHNAME = "/about";
 

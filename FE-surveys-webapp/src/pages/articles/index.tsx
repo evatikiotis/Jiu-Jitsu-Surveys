@@ -1,8 +1,9 @@
-import SurveyListItem from "../../components/SurveyListItem";
+import ArticleListItem from "../../components/SurveyListItem";
+import { createClient } from "../../prismicio";
 
-export default function SurveysList(props: any) {
+export default function Articles(props: any) {
   // eslint-disable-next-line react/prop-types
-  const {surveys} = props;
+  const {articles} = props;
   return (
     <>
       <div>
@@ -21,8 +22,8 @@ export default function SurveysList(props: any) {
             </tr>
             </thead>
             <tbody>
-            {surveys.map((survey: any, index: any) => (
-              <SurveyListItem key={survey.id} survey={survey} index={index}/>
+            {articles.map((article: any, index: any) => (
+              <ArticleListItem key={article.uid} article={article} index={index}/>
             ))}
             </tbody>
           </table>
@@ -35,19 +36,13 @@ export default function SurveysList(props: any) {
 // It won't be called on client-side, so you can even do
 // direct database queries. See the "Technical details" section.
 export async function getStaticProps() {
-  // Call an external API endpoint to get posts.
-  // You can use any data fetching library
-  // TODO: url to be passed as environment variable
-  // const res = await fetch("http://backend:8080/surveys");
-  // const surveys = await res.json();
-  // // By returning { props: posts }, the Blog component
-  // // will receive `posts` as a prop at build time
-  // return {
-  //   props: {
-  //     surveys,
-  //   },
-  // };
-  
-  return {props: {surveys: []}};
+  const client = createClient();
+
+  const articles = await client
+    .getAllByType("article")
+    .catch(() => notFound());
+  console.log("returned articles: ",articles.map(a => a.uid))
+  return {props: {articles}};
 
 }
+
