@@ -54,7 +54,7 @@ export default function About() {
 
 
 
-          <a href="#" class="cta-button">Read More Tutorials</a>
+          <a href="#" className="cta-button">Read More Tutorials</a>
         </article>
 
       </div>

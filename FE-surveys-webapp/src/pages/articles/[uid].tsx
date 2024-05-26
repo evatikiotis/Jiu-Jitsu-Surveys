@@ -6,20 +6,19 @@ import { SliceZone } from "@prismicio/react";
 
 
 
-export default function Article({article}) {
-  
-  return (
-      <SliceZone slices={article.data.slices} components={components} />
-
-  );
+export default function Article({article}:{article:any}) {
+  if(article) {
+    return (<SliceZone slices={article.data.slices} components={components} />);
+  } else{
+    return (<></>);
+  }
 }
 
-export async function getStaticProps({params}) {
+export async function getStaticProps({params}:{params:any}) {
   console.log(params.uid)
   const client = createClient();
   const article = await client
-    .getByUID("article", params.uid)
-    .catch(() => notFound());
+    .getByUID("article", params.uid);
   return {props: {article}};
 
 }
@@ -28,8 +27,7 @@ export async function getStaticPaths() {
   const client = createClient();
 
   const articles = await client
-    .getAllByType("article")
-    .catch(() => notFound());
+    .getAllByType("article");
 
   const paths = articles.map((a) => ({
     params: { uid: a.uid.toString() },

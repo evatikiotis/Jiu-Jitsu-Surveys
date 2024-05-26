@@ -37,8 +37,7 @@ export async function getStaticProps() {
   const client = createClient();
 
   const articles = await client
-    .getAllByType("article")
-    .catch(() => notFound());
+    .getAllByType("article");
   console.log("returned articles: ", articles.map(a => a.uid))
   return {props: {articles}};
 
