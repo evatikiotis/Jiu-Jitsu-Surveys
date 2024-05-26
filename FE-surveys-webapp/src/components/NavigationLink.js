@@ -1,11 +1,9 @@
 import Link from "next/link";
 
-export default function NavigationLink({ label, href }) {
+export default function NavigationLink({ label, href, isActive }) {
   return (
-    <Link href={href}>
-      <div style={{ cursor: "pointer" }} className="nav-link">
+    <Link href={href} className={isActive ? "active nav-link" : "nav-link"}>
         {label}
-      </div>
     </Link>
   );
 }
