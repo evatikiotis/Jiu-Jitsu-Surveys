@@ -1,13 +1,16 @@
 import console from 'console';
 import { createClient } from "../../prismicio";
+import { components } from "../../slices";
+import { SliceZone } from "@prismicio/react";
+
+
 
 
 export default function Article({article}) {
   
   return (
-    <div>
-      {article.uid}
-    </div>
+      <SliceZone slices={article.data.slices} components={components} />
+
   );
 }
 
@@ -32,7 +35,7 @@ export async function getStaticPaths() {
     params: { uid: a.uid.toString() },
   }))
 
-  return { paths, fallback: false }
+  return { paths, fallback: true }
 }
 
 
