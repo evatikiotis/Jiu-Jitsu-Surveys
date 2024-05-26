@@ -1,4 +1,4 @@
-import ArticleListItem from "../../components/SurveyListItem";
+import ArticleListItem from "../../components/ArticleListItem";
 import { createClient } from "../../prismicio";
 
 export default function Articles(props: any) {
@@ -15,9 +15,7 @@ export default function Articles(props: any) {
                 {" "}
                 #{" "}
               </th>
-              <th scope="col"> Survey Name</th>
-              <th scope="col"> Take the Survey</th>
-              <th scope="col"> Survey Analytics</th>
+              <th scope="col"> Article</th>
               <th scope="col"> Created Date</th>
             </tr>
             </thead>
