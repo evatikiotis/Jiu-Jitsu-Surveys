@@ -35,14 +35,10 @@ export default function ArticlesList(props: any) {
 // It won't be called on client-side, so you can even do
 // direct database queries. See the "Technical details" section.
 export async function getStaticProps() {
-    
-
-  return {props: {articles: await readFile("./src/articles")}};
-
+  return {props: {articles: await readDirectory("./src/articles")}};
 }
 
-
-async function readFile(path: any) {
+async function readDirectory(path: any) {
        try {
           //  const data = await fs.readFile(path, 'utf8');
           return await fs.readdir(path);
