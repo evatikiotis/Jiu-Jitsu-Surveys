@@ -18,9 +18,7 @@ const renderers = {
 
 export default function Article(props:any) {
     return (
-        // <div>
-             <Markdown  remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{props.article}</Markdown>
-        // </div>
+        <Markdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>{props.article}</Markdown>
     );
 }
 
